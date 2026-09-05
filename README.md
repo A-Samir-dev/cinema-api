@@ -20,6 +20,7 @@ This project consists of two main parts:
 - ✅ Soft Deletes with a Trash Bin (restore / permanently delete)
 - ✅ Dashboard statistics (total movies, average rating)
 - ✅ AI-powered description generator (Google Gemini API) when adding/editing a movie
+- ✅ AI Chatbot Assistant — an in-dashboard assistant powered by the Google Gemini API, accessible from a dedicated sidebar link, to help the admin with quick questions
 
 ### REST API (for mobile team)
 - ✅ `GET /api/movies` — list all movies (search, filter, pagination)
@@ -44,7 +45,7 @@ This project consists of two main parts:
 - **Database:** MySQL
 - **Frontend (Admin):** Blade + Bootstrap 5
 - **Auth:** Laravel Breeze
-- **AI Integration:** Google Gemini API (`gemini-3.6-flash`)
+- **AI Integration:** Google Gemini API (`gemini-3.6-flash`) — used for both the description generator and the chatbot assistant
 
 ---
 
@@ -202,6 +203,7 @@ Content-Type: application/json
 - The `vendor/` folder is excluded from this submission — run `composer install` to restore it.
 - The database is seeded automatically with real movie data (no Lorem Ipsum) via `php artisan migrate:fresh --seed`.
 - A Postman collection is included for testing the API endpoints directly (see `postman_collection.json` if attached).
+-e 
 
 ---
 
@@ -228,6 +230,7 @@ Content-Type: application/json
 - ✅ حذف مؤقت (Soft Delete) مع سلة مهملات (استرجاع / حذف نهائي)
 - ✅ صفحة إحصائيات (عدد الأفلام، متوسط التقييم)
 - ✅ توليد وصف الفيلم تلقائيًا بالذكاء الاصطناعي (Google Gemini API)
+- ✅ مساعد شات بوت ذكي (AI Chatbot Assistant) داخل لوحة التحكم، مبني على Google Gemini API، ومتاح عن طريق رابط مخصص في القائمة الجانبية لمساعدة الأدمن في أسئلته السريعة
 
 ### الـ API (لفريق الموبايل)
 - ✅ `GET /api/movies` — عرض كل الأفلام (بحث، فلترة، pagination)
@@ -252,7 +255,7 @@ Content-Type: application/json
 - **Database:** MySQL
 - **Frontend (Admin):** Blade + Bootstrap 5
 - **Auth:** Laravel Breeze
-- **AI:** Google Gemini API (`gemini-3.6-flash`)
+- **AI:** Google Gemini API (`gemini-3.6-flash`) — مستخدم في فيتشر توليد الوصف وفيتشر الشات بوت الاتنين
 
 ---
 

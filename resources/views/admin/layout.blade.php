@@ -41,6 +41,12 @@
                         <i class="bi bi-trash"></i> Trash Bin
                     </a>
                 </li>
+                {{-- AI Chatbot Item --}}
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('chatbot.index') ? 'active' : '' }}" href="{{ route('chatbot.index') }}">
+                        <i class="bi bi-robot"></i> AI Chatbot
+                    </a>
+                </li>
             </ul>
         </div>
 

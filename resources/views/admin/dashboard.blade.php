@@ -56,12 +56,15 @@
 {{-- Shortcut Card --}}
 <div class="card p-4">
     <h5 class="fw-bold mb-3">System Shortcuts</h5>
-    <div class="d-flex gap-3">
+    <div class="d-flex gap-3 flex-wrap">
         <a href="{{ route('admin.movies.index') }}" class="btn btn-outline-primary">
             <i class="bi bi-collection-play me-1"></i> Manage All Movies
         </a>
         <a href="{{ route('admin.movies.create') }}" class="btn btn-outline-success">
             <i class="bi bi-plus-lg me-1"></i> Create Movie
+        </a>
+        <a href="{{ route('chatbot.index') }}" class="btn btn-outline-purple style-ai" style="border-color: #6f42c1; color: #6f42c1;">
+            <i class="bi bi-robot me-1"></i> AI Assistant Chat
         </a>
     </div>
 </div>

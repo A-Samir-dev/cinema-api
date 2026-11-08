@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\MovieController;
 use App\Http\Controllers\Api\WatchlistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\MyWatchlistController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -25,3 +26,9 @@ Route::prefix('watchlist')->group(function () {
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
+// My Watchlist (logged-in users)
+Route::middleware('auth:sanctum')->prefix('my-watchlist')->group(function () {
+    Route::get('/', [MyWatchlistController::class, 'index']);
+    Route::post('/', [MyWatchlistController::class, 'store']);
+    Route::delete('/{movieId}', [MyWatchlistController::class, 'destroy']);
+});
